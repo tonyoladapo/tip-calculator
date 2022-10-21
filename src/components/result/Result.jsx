@@ -26,9 +26,7 @@ const Result = () => {
         </div>
       </div>
 
-      <button disabled className="reset-button">
-        RESET
-      </button>
+      <button className="reset-button">RESET</button>
     </div>
   );
 };

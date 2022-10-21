@@ -38,6 +38,8 @@
   border: 0;
   border-radius: 0.2rem;
   padding: 0.5rem;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
 }
 
 .reset-button:hover:enabled {
