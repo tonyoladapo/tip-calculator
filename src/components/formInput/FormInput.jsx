@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./formInput.css";
 
-const FormInput = ({ labelText, icon }) => {
+const FormInput = ({ labelText, Icon }) => {
   const [showBorder, setShowBorder] = useState(false);
   const [focused, setFocused] = useState(false);
   const [value, setValue] = useState();
@@ -19,6 +19,9 @@ const FormInput = ({ labelText, icon }) => {
           borderColor: showBorder ? "hsl(172, 67%, 45%)" : "hsl(189, 41%, 97%)",
         }}
       >
+        <div className="icon-container">
+          <Icon />
+        </div>
         <input
           value={value}
           onChange={(e) => setValue(e.target.value)}

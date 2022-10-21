@@ -6,6 +6,12 @@
   border: 1px solid;
   border-radius: 0.4rem;
   margin: 0.5rem 0;
+  overflow: hidden;
+}
+
+.icon-container {
+  padding: 1rem;
+  background-color: hsl(189, 41%, 97%) !important;
 }
 
 .input-container span {

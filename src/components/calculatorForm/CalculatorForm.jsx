@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import FormInput from "../formInput/FormInput";
 import TipSelector from "../tipSelector/TipSelector";
-import person from "../../assets/img/icon-person.svg";
-import dollar from "../../assets/img/icon-dollar.svg";
+import { ReactComponent as Person } from "../../assets/img/icon-person.svg";
+import { ReactComponent as Dollar } from "../../assets/img/icon-dollar.svg";
 import "./calculatorForm.css";
 
 const CalculatorForm = () => {
   return (
     <>
-      <FormInput labelText="Bill" icon={dollar} />
+      <FormInput labelText="Bill" Icon={Dollar} />
       <TipSelector />
-      <FormInput labelText="Number of People" icon={person} />
+      <FormInput labelText="Number of People" Icon={Person} />
     </>
   );
 };
