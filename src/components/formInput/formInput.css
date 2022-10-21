@@ -1,12 +1,43 @@
+.custom-input {
+  margin: 1rem 0;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error-message {
+  color: hsl(10, 90%, 61%);
+}
+
+.error-container {
+  border-color: hsl(10, 90%, 61%) !important;
+}
+
+.label-container p {
+  text-align: center;
+}
+
 .input-label {
   font-weight: 700;
 }
 
 .input-container {
-  border: 1px solid;
+  border: 2px solid hsl(189, 41%, 97%);
   border-radius: 0.4rem;
   margin: 0.5rem 0;
   overflow: hidden;
+}
+
+.input-container:hover {
+  border-color: hsl(172, 67%, 45%) !important;
+}
+
+.input-container:active {
+  border-color: hsl(172, 67%, 45%);
 }
 
 .icon-container {
