@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import useTipSelector from "../../hooks/useTipSelector";
 import "./tipSelector.css";
 
 const TipSelector = () => {
-  const [selected, setSelected] = useState("");
-  const [customTip, setCustomTip] = useState();
-  const handleSelected = (val) => setSelected(val);
+  const { handleSelected, selected, inputVal, setInputVal } = useTipSelector();
 
   return (
     <div className="">
@@ -16,10 +15,15 @@ const TipSelector = () => {
         <Tip value={25} onSelect={handleSelected} selected={selected} />
         <Tip value={50} onSelect={handleSelected} selected={selected} />
         <input
-          value={customTip}
-          type={"number"}
-          onFocus={() => setSelected(customTip)}
-          onChange={(e) => setCustomTip(e.target.value)}
+          value={inputVal}
+          type="number"
+          onFocus={(e) => {
+            handleSelected(parseInt(e.target.value) || 0);
+          }}
+          onChange={(e) => {
+            setInputVal(e.target.value || "");
+            handleSelected(parseInt(e.target.value) || 0);
+          }}
           className="form-control shadow-none tip-button"
           placeholder="Custom"
         />
