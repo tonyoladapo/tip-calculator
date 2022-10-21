@@ -1,11 +1,11 @@
 import React from "react";
+import logo from "../../assets/img/logo.svg";
 import "./mainHeader.css";
 
 const MainHeader = () => {
   return (
-    <div className="row header-layout">
-      <h4>SPLI</h4>
-      <h4>TTER</h4>
+    <div className="header-layout">
+      <img src={logo} className="logo" />
     </div>
   );
 };
