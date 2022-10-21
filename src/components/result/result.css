@@ -1,0 +1,49 @@
+.result-layout {
+  background-color: hsl(183, 100%, 15%);
+  height: 100%;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.result p {
+  margin: 0;
+  font-weight: 900;
+}
+
+.result h1 {
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+}
+
+.result-title {
+  color: white;
+}
+
+.person-text {
+  color: hsl(185, 41%, 84%);
+}
+
+.reset-button {
+  background-color: hsl(172, 67%, 45%);
+  border: 0;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+
+.reset-button:hover:enabled {
+  background-color: hsl(175, 52.4%, 79.4%);
+}
+
+.reset-button:disabled {
+  background-color: hsl(186, 39.4%, 30.4%);
+}
