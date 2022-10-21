@@ -1,4 +1,6 @@
 import React from "react";
+import CalculatorForm from "../calculatorForm/CalculatorForm";
+import Result from "../result/Result";
 import "./calculatorCard.css";
 
 const CalculatorCard = () => {
@@ -6,8 +8,12 @@ const CalculatorCard = () => {
     <div className="row main-calculator-layout">
       <div className="col-md-6 calculator-card mx-auto">
         <div className="row">
-          <div className="col-md-6"></div>
-          <div className="col-md-6"></div>
+          <div className="col-md-6">
+            <CalculatorForm />
+          </div>
+          <div className="col-md-6">
+            <Result />
+          </div>
         </div>
       </div>
     </div>
