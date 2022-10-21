@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TipContext } from "../../contexts/tipContext";
+import useResult from "../../hooks/useResult";
 import "./result.css";
 
 const Result = () => {
+  const { tipPerPerson, totalPerPerson, reset, disabled } = useResult();
+
   return (
     <div className="result-layout">
       <div>
@@ -11,7 +15,7 @@ const Result = () => {
             <p className="person-text">/ person</p>
           </div>
           <div className="result">
-            <h1>$0.00</h1>
+            <h1>{`$${tipPerPerson.toFixed(2)}`}</h1>
           </div>
         </div>
 
@@ -21,12 +25,14 @@ const Result = () => {
             <p className="person-text">/ person</p>
           </div>
           <div className="result">
-            <h1>$0.00</h1>
+            <h1>{`$${totalPerPerson.toFixed(2)}`}</h1>
           </div>
         </div>
       </div>
 
-      <button className="reset-button">RESET</button>
+      <button disabled={disabled} onClick={reset} className="reset-button">
+        RESET
+      </button>
     </div>
   );
 };
