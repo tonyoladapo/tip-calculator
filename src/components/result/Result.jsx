@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { TipContext } from "../../contexts/tipContext";
+import React from "react";
 import useResult from "../../hooks/useResult";
 import "./result.css";
 
